@@ -21,8 +21,11 @@ header {
 }
 
 #img__perfil {
-    width: 10%;
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
     border-radius: 50%;
+    margin: 1rem 0;
 }
 
 footer {
@@ -32,12 +35,25 @@ footer {
     padding: 1rem;
 }
 
+.principal {
+    max-width: 60rem;
+    margin: 3em auto 5em auto !important;
+    padding: 0 1.5rem;
+}
+
 .conteudo {
     background-color: white !important;
-    padding: 2em !important;
-    margin-top: 1em !important;
-    border-radius: 3rem !important;
+    padding: 1.5em !important;
+    margin-top: 1.5em !important;
+    border-radius: 1rem !important;
     width: 100%;
+    display: flex;
+    align-items: center;
+    transition: transform 0.1s;
+}
+
+.conteudo:hover {
+    transform: scale(1.01);
 }
 
 a {
@@ -45,48 +61,36 @@ a {
     color: black;
 }
 
-.principal {
-    margin-left: 25% !important;
-    margin-right: 25% !important;
-    margin-top: 1% !important;
-    margin-bottom: 15% !important;
-}
-
 .img-icone {
     width: 100% !important;
+    max-width: 5rem;
 }
 
 .txt-icone {
-    font-size: 200% !important;
+    font-size: 1.8rem !important;
+    margin: 0;
+    padding-left: 1rem;
 }
 
-@media (min-width: 200px) and (max-width: 700px) {
-    .img-icone {
-        width: 250% !important;
-    }
+@media (max-width: 768px) {
 
-    .txt-icone {
-        font-size: 220% !important;
-    }
-
-    .conteudo {
-        background-color: white !important;
-        padding: 1em !important;
-        margin-top: 2em !important;
-        border-radius: 1rem !important;
-        width: 130%;
+    #img__perfil {
+        width: 10rem;
+        height: 10rem;
     }
 
     .principal {
-        text-align: center;
-        margin-left: 10% !important;
-        margin-right: 25% !important;
-        margin-top: 1% !important;
-        margin-bottom: 50% !important;
+        margin: 2em auto 10em auto !important;
+        max-width: 90%;
     }
 
-    #img__perfil {
-        width: 10% !important;
-        border-radius: 50% !important;
+    .conteudo {
+        padding: 1em !important;
+        margin-top: 1em !important;
+        border-radius: 0.8rem !important;
+    }
+
+    .txt-icone {
+        font-size: 1.6rem !important;
     }
 }
